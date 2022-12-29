@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+# What do we want to do?
+# We want to find an easy way to calculate how much levain and dough needs
+# to go in the tin
+# To do so we need to ask a few questions:
+# - Tin capacity
+# - Desired hydration in percentage
+
+print "Final bread weight (in grams): "
+STDOUT.flush
+final_weight = gets.chomp.to_f
+
+print "Hydration (in percentage): "
+STDOUT.flush
+hydration = gets.chomp.to_f
+
+total = 100 + hydration + 2
+factor = final_weight / total
+
+total_flour = factor * 100
+total_water = total_flour * (hydration / 100)
+total_dough = total_flour + total_water
+total_salt  = (total_flour * 0.02).to_i
+
+puts "total flour: #{total_flour.to_i}"
+puts "total water: #{total_water.to_i}"
+
+# poolish is 20% of the total dough
+total_poolish = (total_dough * 0.2).to_i
+puts "poolish flour: #{total_poolish / 2}"
+puts "poolish water: #{total_poolish / 2}"
+
+rest_of_flour = total_flour - (total_poolish  / 2)
+rest_of_water = total_water - (total_poolish / 2)
+
+puts "rest of the flour: #{rest_of_flour.to_i}"
+puts "rest of the water: #{rest_of_water.to_i}"
+puts "salt: #{total_salt}"
+# calculate poolish, which is 20% of the total dough
