@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bake some bread!</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <form id="calculator" action="#">
+        <div class="field">
+          <label class="label">Flour:</label>
+          <div class="control">
+            <input name="flour" class="input" type="number" value="400" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Hydration:</label>
+          <div class="control">
+            <input name="hydration" class="input" type="number" value="75" />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button class="button is-link" name="calculate">Calculate</button>
+          </div>
+        </div>
+      </form>
+
+      <form id="results" action="#">
+        <div class="field">
+          <label class="label">Salt:</label>
+          <div class="control">
+            <input name="salt" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Total water:</label>
+          <div class="control">
+            <input name="totalwater" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">New water weight:</label>
+          <div class="control">
+            <input name="newwater" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">New flour weight:</label>
+          <div class="control">
+            <input name="newflour" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Poolish flour:</label>
+          <div class="control">
+            <input name="poolishflour" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Poolish water:</label>
+          <div class="control">
+            <input name="poolishwater" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Total dough weight:</label>
+          <div class="control">
+            <input name="totalweight" class="input" type="text" readonly="readonly" />
+          </div>
+        </div>
+      </form>
+
+      <script type="text/javascript" src="app.js"></script>
+
+    </div>
+  </section>
+</body>
+
+</html>
